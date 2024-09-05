@@ -1,0 +1,40 @@
+/******************************************************************************
+
+                            Online Java Debugger.
+                Code, Run and Debug Java program online.
+Write your code in this editor and press "Debug" button to debug program.
+
+*******************************************************************************/
+
+public class Main
+{
+	public static void main(String[] args) {
+		int[] arr= {1,2,3,4,5};
+		bubbleSort(arr);
+		System.out.println(java.util.Arrays.toString(arr));
+
+	}
+
+	static void bubbleSort(int[] arr) {
+		boolean swapped;
+		for(int i=0; i<arr.length-1; i++) {
+			swapped=false;
+
+			for(int j=0; j<arr.length-i-1; j++) {
+
+				if(arr[j+1]<arr[j]) {
+					int temp = arr[j+1];
+					arr[j+1] = arr[j];
+					arr[j] = temp;
+					swapped=true;
+				}
+			}
+			System.out.println(java.util.Arrays.toString(arr));
+			if(!swapped) {
+				break;
+			}
+		}
+
+
+	}
+}
